@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --color-neon-blue: #00f0ff;
+  --color-neon-purple: #b026ff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: #0c1128;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Custom mask utilities for the spotlight effect */
+.mask-radial {
+  mask-image: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+    black 0%, 
+    transparent var(--mask-size, 35%)
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+    black 0%, 
+    transparent var(--mask-size, 35%)
+  );
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
